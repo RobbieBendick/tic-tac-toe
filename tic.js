@@ -1,6 +1,6 @@
 let main = () => {
- 
-    // set DOM to all boxes or input field
+    
+    // init all buttons
     let b1, b2, b3, b4, b5, b6, b7, b8, b9;
     b1 = document.getElementById("b1").value;
     b2 = document.getElementById("b2").value;
@@ -18,27 +18,27 @@ let main = () => {
         window.alert(`Player ${player} won`);
     }
 
-    let checkWin = (a1, a2, a3, marker) => (a1 == marker.toLowerCase() || a1 == marker) && (a2 == marker.toLowerCase() || a2 == marker) && (a3 == marker.toLowerCase() || a3 == marker);
+    let check_win = (a1, a2, a3, marker) => (a1 == marker.toLowerCase() || a1 == marker) && (a2 == marker.toLowerCase() || a2 == marker) && (a3 == marker.toLowerCase() || a3 == marker);
 
     // check if player X wins
-    if (checkWin(b1, b2, b3, 'X')) player_won("X");
-    else if (checkWin(b1, b4, b7, 'X')) player_won("X");
-    else if (checkWin(b7, b8, b9, 'X')) player_won("X");
-    else if (checkWin(b3, b6, b9, 'X')) player_won("X");
-    else if (checkWin(b1, b5, b9, 'X')) player_won("X");
-    else if (checkWin(b3, b5, b7, 'X')) player_won("X");
-    else if (checkWin(b2, b5, b8, 'X')) player_won("X");
-    else if (checkWin(b4, b5, b6, 'X')) player_won("X");
+    if (check_win(b1, b2, b3, 'X')) player_won("X");
+    else if (check_win(b1, b4, b7, 'X')) player_won("X");
+    else if (check_win(b7, b8, b9, 'X')) player_won("X");
+    else if (check_win(b3, b6, b9, 'X')) player_won("X");
+    else if (check_win(b1, b5, b9, 'X')) player_won("X");
+    else if (check_win(b3, b5, b7, 'X')) player_won("X");
+    else if (check_win(b2, b5, b8, 'X')) player_won("X");
+    else if (check_win(b4, b5, b6, 'X')) player_won("X");
    
     // check if player 0 wins
-    if (checkWin(b1,b2,b3, '0')) player_won("0");
-    else if (checkWin(b1, b4, b7, '0')) player_won("0");
-    else if (checkWin(b7, b8, b9, '0')) player_won("0");
-    else if (checkWin(b3, b6, b9, '0')) player_won("0");
-    else if (checkWin(b1, b5, b9, '0')) player_won("0");
-    else if (checkWin(b3, b5, b7, '0')) player_won("0");
-    else if (checkWin(b2, b5, b8, '0')) player_won("0");
-    else if (checkWin(b4, b5, b6, '0')) player_won("0");
+    if (check_win(b1,b2,b3, '0')) player_won("0");
+    else if (check_win(b1, b4, b7, '0')) player_won("0");
+    else if (check_win(b7, b8, b9, '0')) player_won("0");
+    else if (check_win(b3, b6, b9, '0')) player_won("0");
+    else if (check_win(b1, b5, b9, '0')) player_won("0");
+    else if (check_win(b3, b5, b7, '0')) player_won("0");
+    else if (check_win(b2, b5, b8, '0')) player_won("0");
+    else if (check_win(b4, b5, b6, '0')) player_won("0");
  
     // check tie
     else if ((b1 == 'X' || b1 == '0') && (b2 == 'X'

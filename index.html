@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+   
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="tic.css">
+   
+    <!-- js file -->
+    <script src="tic.js"></script>
+
+</head>
+   
+<body>
+    <div id="main">
+        <h1>TIC TAC TOE</h1>
+   
+        <!-- Game Instructions -->
+        <p id="ins">Tap on a box to start!<br><br>First Player starts as 
+            <b>Player X</b><br>And<br>Second 
+            Player as <b>Player 0</b>
+        </p>
+   
+        <br><br>
+        <!-- 3*3 grid of Boxes -->
+        <input type="text" id="b1" onclick="place_mark('b1'); main();" readonly>
+        <input type="text" id="b2" onclick="place_mark('b2'); main();" readonly>
+        <input type="text" id="b3" onclick="place_mark('b3'); main();" readonly>
+        <br><br>
+        <input type="text" id="b4" onclick="place_mark('b4'); main();" readonly>
+        <input type="text" id="b5" onclick="place_mark('b5'); main();" readonly>
+        <input type="text" id="b6" onclick="place_mark('b6'); main();" readonly>
+        <br><br>
+        <input type="text" id="b7" onclick="place_mark('b7'); main();" readonly>
+        <input type="text" id="b8" onclick="place_mark('b8'); main();" readonly>
+        <input type="text" id="b9" onclick="place_mark('b9'); main();" readonly>
+        <br><br><br>
+        <!-- Button to reset game -->
+        <button id="but" onclick="reset()">
+            RESET
+        </button>
+   
+        <br><br>
+        <!-- Space to show player turn -->
+        <p id="print"></p>
+    </div>
+</body>
+   
+</html>

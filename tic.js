@@ -14,9 +14,9 @@ let main = () => {
     b9 = document.getElementById("b9").value;
 
     let player_won = player => {
-        document.getElementById('print').innerHTML = `Player ${player} won`;
         for (let i = 1; i < 10; i++) document.getElementById(`b${i}`).disabled = true;
         window.alert(`Player ${player} won`);
+        document.getElementById('print').innerHTML = `Player ${player} won`;
         won = true;
     }
 

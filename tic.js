@@ -1,5 +1,6 @@
 let main = () => {
-    
+    let won = false;
+
     // init all buttons
     let b1, b2, b3, b4, b5, b6, b7, b8, b9;
     b1 = document.getElementById("b1").value;
@@ -16,6 +17,7 @@ let main = () => {
         document.getElementById('print').innerHTML = `Player ${player} won`;
         for (let i = 1; i < 10; i++) document.getElementById(`b${i}`).disabled = true;
         window.alert(`Player ${player} won`);
+        won = true;
     }
 
     let check_win = (a1, a2, a3, marker) => (a1 == marker.toLowerCase() || a1 == marker) && (a2 == marker.toLowerCase() || a2 == marker) && (a3 == marker.toLowerCase() || a3 == marker);
@@ -42,14 +44,16 @@ let main = () => {
  
     // check tie
     else if ((b1 == 'X' || b1 == '0') && (b2 == 'X'
-        || b2 == '0') && (b3 == 'X' || b3 == '0') &&
-        (b4 == 'X' || b4 == '0') && (b5 == 'X' ||
-        b5 == '0') && (b6 == 'X' || b6 == '0') &&
-        (b7 == 'X' || b7 == '0') && (b8 == 'X' ||
-        b8 == '0') && (b9 == 'X' || b9 == '0')) {
-        document.getElementById('print').innerHTML = "Match Tie";
-        window.alert('Match Tie');
-    }
+    || b2 == '0') && (b3 == 'X' || b3 == '0') &&
+    (b4 == 'X' || b4 == '0') && (b5 == 'X' ||
+    b5 == '0') && (b6 == 'X' || b6 == '0') &&
+    (b7 == 'X' || b7 == '0') && (b8 == 'X' ||
+    b8 == '0') && (b9 == 'X' || b9 == '0')) {
+        if (!won) {
+            document.getElementById('print').innerHTML = "Match Tie";
+            window.alert('Match Tie');
+        }
+}
     else {
         // display result to user
         if (turn == 1) document.getElementById('print').innerHTML = "Player X Turn";
